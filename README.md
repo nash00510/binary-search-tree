@@ -1,7 +1,7 @@
 # Binary Search Tree Implementation
 ### An implementation of a Binary Search Tree for a University Assignment
 
-We were asked to implement a BST from scratch and also a program that would use the BST and print its contents is lexicographical order.
+This project was an Assignment for COMPX201 (Data Structures and Algorithms). We were asked to implement a BST from scratch and also a program that would use the BST and print its contents is lexicographical order.
 
 ## Included in this repository:
 * BSTlex.java - Binary Search Tree class
