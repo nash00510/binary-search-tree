@@ -1,0 +1,112 @@
+
+<!-- saved from url=(0060)https://www.cs.waikato.ac.nz/~tcs/COMPX201/assign3-2019.html -->
+<html><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+
+body { font-family: serif; font-size: 10pt}
+h2 { font-size: 24px; 
+font-style: italic;
+}
+
+
+</style>
+</head>
+
+<body>
+<h2> COMPX201/241-19A — Assignment Three </h2>
+
+<h3>Binary Search Trees</h3>
+
+<b> Due:</b> Wednesday, May 22nd, 2019 — 11pm
+ 
+<p>
+<b>Description:</b>
+This assignment is intended to give you experience maintaining a
+binary search tree (BST) of words.  You must write your own BST class
+and all its required operations.  Your program must compile and run on
+the Linux machines in R Block. 
+</p>
+<p>
+<b>Input/Output:</b>
+Your program should run as a console program from the Linux
+command-line (i.e. no GUI).  Your program class should be called
+OddWords.java and it should accept as a command-line argument the name
+of a text file expected to be in the same directory.  Your program is
+to process the contents of that file as a stream of words according to
+the following specification:
+</p><ul>
+<li>a word is any contiguous sequence of alpha-numeric characters —
+specifically, the letters A to Z in either upper or lower case, and digits.
+</li><li>any other characters are ignored (i.e. treated as blank space
+between words)
+</li><li>any word found on input must be converted entirely to lower case
+letters (n.b. the java String class has a toLowerCase method that can
+be used for this)
+</li><li>given the above, it follows that the contents of the input file
+can be treated as a stream of words composed entirely from lower case
+letters and digits
+</li><li>write code to maintain a BST of words that can insert, delete and
+find words (i.e. words are keys); your BST must be a class called
+  BSTlex defined in a file called BSTlex.java; it must make use of
+  self-referential structures, and you must define all its methods
+</li><li>write four different JUnit tests for each of the insert, delete
+  and find operations, making sure you think about testing for "edge"
+  cases, like an empty BST. 
+</li><li> your program OddWords must use an instance of your BSTlex class
+  to achieve the following: 
+<ul>
+  <li>each word found on input must be added to the BST if it is not
+already there, but deleted if it is found
+  </li><li>each time your program searches for a word (either for insertion
+  or deletion) all the words along the search path down the BST must
+  be printed out on a single line, separated by spaces, with
+  the target word appearing last.
+  </li><li>if the word is not found, it is added to the tree and the label
+"INSERTED" is to appear after the target word at the end of the output
+line.
+  </li><li>if the word is found, then it is removed from the tree and the
+label "DELETED" is to appear after the target word at the end of the
+    output line
+  </li><li>write four different JUnit tests for your program class: two for
+  the case where a word to be added is not in the BST, and two for the
+  case when the word is already in the tree 
+</li></ul>
+</li><li>reiterating: each search for a word produces one line of output
+that includes a space-separated list of all the words found along the
+search path, in the order they are examined, followed by the word
+being looked for and either the label "INSERTED" or "DELETED" at the very
+end. 
+</li><li>once the entire file has been processed, your BST will obviously
+contain all words that appeared an odd number of times in the file,
+because any that were found an even number of times will have been
+deleted, perhaps many times over.
+</li><li>after the file has been processed, have your program output the
+label "LEXICON:" on a line by itself.
+</li><li>following the "LEXICON:" label, print out all the words still in
+the BST, one word per line and in dictionary order — that is,
+you must do an in-order traversal of the BST and print out all the
+words still in it.
+</li><li>all output is to standard out
+</li></ul>
+<p></p>
+<p>
+A sample file and its correct output will be posted on the course
+webpage (i.e. Moodle) so that you can check your program conforms to
+this specification.
+</p>
+
+<p>
+<b>Submission:</b>
+Make sure your code is properly formatted and well-documented,
+including your name and student identification number.  Submit your
+source code only (no .class files or data) using Moodle. Ideally, your
+submission will be made as one archive file (see Linux "tar" or "zip").
+</p>
+
+<p>
+<font size="-1">Tony C. Smith, 28/4/2019</font>
+</p>
+
+
+
+</body></html>
