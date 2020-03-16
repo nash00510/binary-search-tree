@@ -1,5 +1,4 @@
 /*Author: Nash Smith
-  ID: 1277758
 */
 
 class BSTlex {
